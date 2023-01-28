@@ -1,0 +1,4 @@
+<h3>Loading {{ isLoading | async }}</h3>
+<h3>User ........ {{ mydata | async | json }}</h3>
+
+<div *ngIf="isLoading | async">Loading....</div>

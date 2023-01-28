@@ -1,0 +1,38 @@
+<hello name="{{ name }}"></hello>
+<p>Start editing to see some magic happen :)</p>
+
+<hr />
+<h1>Count = {{ count$ | async }}</h1>
+<button
+  (click)="increment()"
+  style="width:100px; height:30px; background-color:skyblue"
+>
+  +1
+</button>
+<button
+  (click)="decrement()"
+  style="width:100px; height:30px; background-color:skyblue"
+>
+  -1
+</button>
+<button
+  (click)="multiplyBy(10)"
+  style="width:100px; height:30px; background-color:skyblue"
+>
+  *10
+</button>
+
+<hr />
+<h1>LoggedIn user = {{ loggedInUser }}</h1>
+
+<div *ngIf="(loggedInUser | async)?.username; else notlogin">
+  <h1>LoggedIn user = {{ loggedInUser | async | json }}</h1>
+</div>
+<ng-template #notlogin>
+  <h3>You are not logged in.</h3>
+  <button (click)="login()"><h5>Click here to log in</h5></button>
+</ng-template>
+
+<hr />
+
+<app-login></app-login>
