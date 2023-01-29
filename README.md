@@ -1,3 +1,3 @@
 # ngrx-effect
 
-[See The demo ⚡️](https://stackblitz.com/edit/angular-ivy-wrz4uk)
+[See The demo ⚡️](https://angular-ivy-wrz4uk.stackblitz.io/)
